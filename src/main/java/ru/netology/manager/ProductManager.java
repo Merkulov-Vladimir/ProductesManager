@@ -12,7 +12,6 @@ public class ProductManager {
 
     public void addProduct(Product product) {
         repository.save(product);
-        product.getName().contains("2");
     }
 
     public Product[] searchBy(String text) {

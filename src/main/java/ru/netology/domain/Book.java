@@ -1,7 +1,7 @@
 package ru.netology.domain;
 
 public class Book extends Product{
-    private String Author;
+    private String author;
 
     public Book() {
         super();
@@ -9,15 +9,15 @@ public class Book extends Product{
 
     public Book(int id, String name, int price, String author) {
         super(id, name, price);
-        Author = author;
+        this.author = author;
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.author = author;
     }
 
     public boolean matches(String search) {
