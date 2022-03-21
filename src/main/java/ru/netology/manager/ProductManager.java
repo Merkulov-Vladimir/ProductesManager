@@ -34,7 +34,7 @@ public class ProductManager {
 //        } else {
 //            return false;
 //        }
-        // или в одну строку:
-        // return product.getName().contains(search);
-   // }
+    // или в одну строку:
+    // return product.getName().contains(search);
+    // }
 }
