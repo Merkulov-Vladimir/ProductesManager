@@ -42,4 +42,17 @@ class ProductManagerTest {
         Product[] actual = manager.searchBy("Book");
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void searchByWhenThereNoMatches() {
+        manager.addProduct(item1);
+        manager.addProduct(item2);
+        manager.addProduct(book);
+        manager.addProduct(smartphone);
+        manager.addProduct(item3);
+        manager.addProduct(book2);
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("King");
+        assertArrayEquals(expected, actual);
+    }
 }
