@@ -35,13 +35,4 @@ class ProductRepositoryTest {
         Product[] actual = repo.findAll();
         assertArrayEquals(expected, actual);
     }
-// такой же как и findAll, но пусть будет
-    @Test
-    void save() {
-        repo.save(item1);
-        repo.save(item2);
-        Product[] expected = {item1, item2};
-        Product[] actual = repo.findAll();
-        assertArrayEquals(expected, actual);
-    }
 }
