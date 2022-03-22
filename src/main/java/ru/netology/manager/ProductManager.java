@@ -1,5 +1,7 @@
 package ru.netology.manager;
 
+import ru.netology.domain.AlreadyExistsException;
+import ru.netology.domain.NotFoundException;
 import ru.netology.domain.Product;
 import ru.netology.repository.ProductRepository;
 
@@ -11,6 +13,9 @@ public class ProductManager {
     }
 
     public void addProduct(Product product) {
+        if (repository.findById(product.getId()) != null) {
+            throw new AlreadyExistsException("Element with id: " + product.getId() + " already exist");
+        }
         repository.save(product);
     }
 

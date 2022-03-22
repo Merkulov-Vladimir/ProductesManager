@@ -43,7 +43,6 @@ class ProductRepositoryTest {
         repo.save(item2);
         repo.save(book);
         repo.save(smartphone);
-        //repo.findById(2);
         Product expected = item2;
         Product actual = repo.findById(2);
         ;
